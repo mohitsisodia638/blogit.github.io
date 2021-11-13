@@ -1,11 +1,13 @@
 {
   "private": true,
+  "homepage": "https://blog-it.in",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
+    "gh-pages": "^3.2.3",
     "graphql": "^16.0.1",
     "graphql-request": "^3.6.1",
     "html-react-parser": "^1.4.0",
