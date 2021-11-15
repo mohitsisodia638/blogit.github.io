@@ -1,5 +1,4 @@
 import React from 'react';
- 
 import { AiFillLinkedin, AiFillFacebook } from 'react-icons/ai';
 import { AiOutlineWhatsApp } from 'react-icons/ai';
 import Link from 'next/link';
@@ -70,24 +69,26 @@ const PostDetail = ({ post }) => {
               </svg>
               <span className="align-middle">{moment(post.createdAt).format('MMM DD, YYYY')}</span>
             </div>
+          </div>
+          <div className="flex items -center mb-2 w-full">
             <div className="font-medium text-gray-700">
-              <span className="align-middle inline-block ml-3">SHARE:</span>
+              <span className="align-middle inline-block">SHARE:</span>
             </div>
             <div>
               <Link href={`https://www.linkedin.com/shareArticle?url=https://blog-it.in/post/${post.slug}&title=${post.title}`}>
-                <span className="transition duration-500 ease transform hover:-translate-y-1 inline-block ml-3 cursor-pointer"><AiFillLinkedin size="1.8rem" color='#0077b5'/></span>
+                <span className="transition duration-500 ease transform hover:-translate-y-1 inline-block ml-3 cursor-pointer"><AiFillLinkedin size="1.6rem" color='#0077b5'/></span>
               </Link>
             </div>
             <div>
               <Link href={`https://wa.me/?text=${post.title} https://blog-it.in/post/${post.slug}`}>
-                <span className="transition duration-500 ease transform hover:-translate-y-1 inline-block ml-3 cursor-pointer"><AiOutlineWhatsApp size="1.8rem" color='#25d366'/></span>
+                <span className="transition duration-500 ease transform hover:-translate-y-1 inline-block ml-3 cursor-pointer"><AiOutlineWhatsApp size="1.6rem" color='#25d366'/></span>
               </Link>
             </div>
             <div>
               <Link href={`https://www.facebook.com/sharer.php?u=https://blog-it.in/post/${post.slug}`}>
-                <span className="transition duration-500 ease transform hover:-translate-y-1 inline-block ml-3 cursor-pointer"><AiFillFacebook size="1.8rem" color='#1877f2' /></span>
+                <span className="transition duration-500 ease transform hover:-translate-y-1 inline-block ml-3 cursor-pointer"><AiFillFacebook size="1.6rem" color='#1877f2' /></span>
               </Link>
-            </div>
+            </div>        
           </div>
           <h1 className="mb-8 text-3xl font-semibold">{post.title}</h1>
           {post.content.raw.children.map((typeObj, index) => {
@@ -97,7 +98,6 @@ const PostDetail = ({ post }) => {
           })}
         </div>
       </div>
-
     </>
   );
 };
