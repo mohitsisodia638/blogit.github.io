@@ -1,4 +1,7 @@
 import React from 'react';
+ 
+import { AiFillLinkedin, AiFillFacebook } from 'react-icons/ai';
+import { AiOutlineWhatsApp } from 'react-icons/ai';
 
 import moment from 'moment';
 
@@ -65,6 +68,24 @@ const PostDetail = ({ post }) => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
               <span className="align-middle">{moment(post.createdAt).format('MMM DD, YYYY')}</span>
+            </div>
+            <div className="font-medium text-gray-700">
+              <span className="align-middle inline-block ml-10">SHARE:</span>
+            </div>
+            <div>
+              <Link href={`https://www.linkedin.com/shareArticle?url=https://blog-it.in/post/${post.slug}&title=${post.title}`}>
+                <span className="transition duration-500 ease transform hover:-translate-y-1 inline-block ml-3 cursor-pointer"><AiFillLinkedin size="1.8rem" color='#0077b5'/></span>
+              </Link>
+            </div>
+            <div>
+              <Link href={`https://wa.me/?text=${post.title} https://blog-it.in/post/${post.slug}`}>
+                <span className="transition duration-500 ease transform hover:-translate-y-1 inline-block ml-3 cursor-pointer"><AiOutlineWhatsApp size="1.8rem" color='#25d366'/></span>
+              </Link>
+            </div>
+            <div>
+              <Link href={`https://www.facebook.com/sharer.php?u=https://blog-it.in/post/${post.slug}`}>
+                <span className="transition duration-500 ease transform hover:-translate-y-1 inline-block ml-3 cursor-pointer"><AiFillFacebook size="1.8rem" color='#1877f2' /></span>
+              </Link>
             </div>
           </div>
           <h1 className="mb-8 text-3xl font-semibold">{post.title}</h1>
