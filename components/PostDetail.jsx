@@ -71,7 +71,7 @@ const PostDetail = ({ post }) => {
               <span className="align-middle">{moment(post.createdAt).format('MMM DD, YYYY')}</span>
             </div>
             <div className="font-medium text-gray-700">
-              <span className="align-middle inline-block ml-10">SHARE:</span>
+              <span className="align-middle inline-block ml-3">SHARE:</span>
             </div>
             <div>
               <Link href={`https://www.linkedin.com/shareArticle?url=https://blog-it.in/post/${post.slug}&title=${post.title}`}>
