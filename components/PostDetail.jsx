@@ -2,6 +2,7 @@ import React from 'react';
  
 import { AiFillLinkedin, AiFillFacebook } from 'react-icons/ai';
 import { AiOutlineWhatsApp } from 'react-icons/ai';
+import Link from 'next/link';
 
 import moment from 'moment';
 
